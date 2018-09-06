@@ -15,7 +15,7 @@ class PeopleList extends React.Component {
   }
 
   componentDidMount() {
-    API.getPeople()
+    API.get('people')
       .then(res => {
         const people = res.results;
         this.setState({ people })

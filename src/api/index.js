@@ -1,8 +1,5 @@
 import axios from 'axios';
-import { getPeople, getPeopleById } from './people';
-import { getFilms, getFilmsById } from './films';
-import { getSpecies, getSpeciesById } from './species';
-import { getPlanets, getPlanetsById } from './planets';
+import { get, getById } from './resources';
 
 export const API = axios.create({
   baseURL: 'https://swapi.co/api/',
@@ -10,12 +7,6 @@ export const API = axios.create({
 });
 
 export default { 
-  getPeople, 
-  getPeopleById,
-  getFilms, 
-  getFilmsById ,
-  getSpecies, 
-  getSpeciesById ,
-  getPlanets, 
-  getPlanetsById  
+  get, 
+  getById,
 };

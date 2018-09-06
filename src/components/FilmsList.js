@@ -15,7 +15,7 @@ class FilmsList extends React.Component {
   }
 
   componentDidMount() {
-    API.getFilms()
+    API.get('films')
       .then(res => {
         const films = res.results;
         this.setState({ films })

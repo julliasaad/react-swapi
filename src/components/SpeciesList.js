@@ -15,7 +15,7 @@ class SpeciesList extends React.Component {
   }
 
   componentDidMount() {
-    API.getSpecies()
+    API.get('species')
       .then(res => {
         const species = res.results;
         this.setState({ species })

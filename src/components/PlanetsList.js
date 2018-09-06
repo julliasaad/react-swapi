@@ -15,7 +15,7 @@ class PlanetsList extends React.Component {
   }
 
   componentDidMount() {
-    API.getPlanets()
+    API.get('planets')
       .then(res => {
         const planets = res.results;
         this.setState({ planets })
